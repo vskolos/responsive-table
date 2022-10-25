@@ -1,7 +1,8 @@
 {
-  "name": "table-pagination",
+  "name": "responsive-table",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/responsive-table/",
   "dependencies": {
     "@types/node": "^16.18.0",
     "@types/react": "^18.0.21",
