@@ -1,3 +1,4 @@
+import { CSSProperties } from 'react'
 import useStickyTableHead from '../../hooks/useStickyTableHead'
 import './Table.module.scss'
 
@@ -18,10 +19,18 @@ export function Table({ data, colsPerPage, page }: Props) {
     )
   }
 
+  // Set dynamic inline styles to avoid issue when the width won't change
+  // after table transposition on mobile screens
+  const tableRowGridStyle = {
+    gridTemplateColumns: `9rem repeat(${
+      colsPerPage === data[0].length ? colsPerPage - 1 : colsPerPage
+    }, minmax(11rem, 1fr))`,
+  } as CSSProperties
+
   return (
     <table ref={tableRef}>
       <thead>
-        <tr>
+        <tr style={tableRowGridStyle}>
           {data[0]
             .filter((_, index) => belongsToPage(index))
             .map((cell, index) => (
@@ -33,7 +42,7 @@ export function Table({ data, colsPerPage, page }: Props) {
         {data.map(
           (row, rowIndex) =>
             rowIndex > 0 && (
-              <tr key={rowIndex}>
+              <tr key={rowIndex} style={tableRowGridStyle}>
                 {row
                   .filter((_, cellIndex) => belongsToPage(cellIndex))
                   .map((cell, cellIndex) =>
