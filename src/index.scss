@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local(''), url('fonts/pt-sans-400.woff2') format('woff2'),
+    url('fonts/pt-sans-400.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local(''), url('fonts/pt-sans-700.woff2') format('woff2'),
+    url('fonts/pt-sans-700.woff') format('woff');
+}
+
+:root {
+  --clr-red-30: hsl(0, 93%, 33%);
+  --clr-red-40: hsl(0, 93%, 43%);
+  --clr-red-50: hsl(0, 93%, 53%);
+  --clr-brown-30: hsl(18, 24%, 30%);
+  --clr-brown-40: hsl(18, 24%, 40%);
+  --clr-brown-50: hsl(18, 24%, 50%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-gray-10: hsl(0, 0%, 10%);
+  --clr-gray-20: hsl(0, 0%, 20%);
+  --clr-gray-30: hsl(0, 0%, 30%);
+  --clr-gray-40: hsl(0, 0%, 40%);
+  --clr-gray-50: hsl(0, 0%, 50%);
+  --clr-gray-60: hsl(0, 0%, 60%);
+  --clr-gray-70: hsl(0, 0%, 70%);
+  --clr-gray-80: hsl(0, 0%, 80%);
+  --clr-gray-90: hsl(0, 0%, 90%);
+  --clr-gray-97: hsl(0, 0%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-primary-200: hsl(210, 100%, 94%);
+  --clr-primary-300: hsl(210, 91%, 74%);
+  --clr-primary-400: hsl(210, 87%, 54%);
+  --clr-primary-500: hsl(210, 87%, 44%);
+  --clr-primary-600: hsl(210, 87%, 34%);
+}
+
+body {
+  min-width: 20rem;
+  font-family: 'PT Sans', -apple-system, 'Helvetica Neue', sans-serif;
+  color: var(--clr-gray-10);
+}
+
+img,
+svg {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
